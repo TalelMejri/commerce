@@ -1,0 +1,28 @@
+
+<div class="conrainer center">
+  <div class="card back shadow"  style="width:60rem;">
+    <div class="card-body">
+      <h5 class="card-title text-primary prod p-1 m-1 rounded mb-4">List des Produits</h5>
+     <table class="table text-center ">
+      <thead class="table-dark">
+         <th class="fw-bolder">#</th>
+         <th class="fw-bolder">Libelle</th>
+         <th class="fw-bolder">Prix</th>
+         <th class="fw-bolder">action</th>
+      </thead>
+      <tbody>
+         <tr *ngFor="let product of products ;let i=index ">
+            <td>{{i+1}}</td>
+            <td>{{product.libelle}}</td>
+            <td>{{product.prix}}</td>
+            <td>
+             <button class="btn btn-outline-danger mx-2">delete</button>
+             <button class="btn btn-outline-warning ">update</button>
+            </td>
+         </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-outline-success float-end">Ajouter Produit</button>
+   </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.back{
+  background-image: linear-gradient(to right,#83a4d4,#b6fbff);
+}
+.prod{
+    text-shadow: 2px 2px 5px red;
+    font-size: 30px;
+}
