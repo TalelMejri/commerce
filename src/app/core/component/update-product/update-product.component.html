@@ -1,0 +1,13 @@
+<form (ngSubmit)="updatedproduct()">
+  <div class="mb-3">
+    <label for="libelle" class="form-label">Libelle produit</label>
+    <input type="text" class="form-control" id="libelle" name="libelle" [(ngModel)]="libelle_product"/>
+  </div>
+
+  <div class="mb-3">
+    <label for="prix" class="form-label">Prix produit</label>
+    <input type="number" class="form-control" min="1" max="9999999" id="prix" name="prix" [(ngModel)]="prix"/>
+  </div>
+
+  <button type="submit" class="btn btn-primary" >Update</button>
+</form>
