@@ -4,18 +4,24 @@ import { ConsulteAllProductComponent } from './component/consulte-all-product/co
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddProduitComponent } from './component/add-produit/add-produit.component';
+import { RouterModule } from '@angular/router';
+import { UpdateProductComponent } from './component/update-product/update-product.component';
+import { DeleteproductComponent } from './component/deleteproduct/deleteproduct.component';
 @NgModule({
   declarations: [
     ConsulteAllProductComponent,
-    AddProduitComponent
+    AddProduitComponent,
+    UpdateProductComponent,
+    DeleteproductComponent
   ],
   imports: [
     CommonModule,
-    FormsModule,HttpClientModule
+    FormsModule,HttpClientModule,
+    RouterModule
   ],
   //export t5ali laabed yesta3emlohom
   exports: [
-    ConsulteAllProductComponent,AddProduitComponent
+    ConsulteAllProductComponent,AddProduitComponent,UpdateProductComponent
   ]
 })
 export class CoreModule { }
