@@ -1,1 +1,17 @@
-<p>add-produit works!</p>
+
+ <form method="POST" (ngSubmit)="addproduct()">
+      {{error}}
+  <input type="text"
+   name="produit" [(ngModel)]="product.libelle"
+   required
+   placeholder="Nom produit">
+
+  <input type="text"
+  name="prix" [(ngModel)]="product.prix"
+  required
+  placeholder="prix produit">
+
+   <button>Add</button>
+
+  </form>
+
