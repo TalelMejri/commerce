@@ -1,6 +1,6 @@
 
 <div class="conrainer center">
-  <div class="card back shadow"  style="width:60rem;">
+  <div class="card back shadow" style="width:60rem;">
     <div class="card-body">
       <h5 class="card-title text-primary prod p-1 m-1 rounded mb-4">List des Produits</h5>
      <table class="table text-center ">
@@ -16,13 +16,13 @@
             <td>{{product.libelle}}</td>
             <td>{{product.prix}}</td>
             <td>
-             <button class="btn btn-outline-danger mx-2">delete</button>
-             <button class="btn btn-outline-warning ">update</button>
+             <button (click)="deleteproduct(product.productid)"  class="btn btn-outline-danger mx-2">delete</button>
+             <button [routerLink]="['/update',product.productid,product.prix,product.libelle]" class="btn btn-outline-warning ">update</button>
             </td>
          </tr>
       </tbody>
     </table>
-    <button class="btn btn-outline-success float-end">Ajouter Produit</button>
+    <button routerLink="/add" class="btn btn-outline-success float-end">Ajouter Produit</button>
    </div>
   </div>
 </div>
