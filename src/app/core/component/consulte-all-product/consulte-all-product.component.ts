@@ -17,7 +17,14 @@ export class ConsulteAllProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getproduct();
+    //this.deleteproduct();
   }
+
+ /* deleteproduct(productid:number){
+    this.productService.deleteproduct().subscribe(p=>{
+
+    })
+  }*/
 
   getproduct() {
     this.productService.getproduct().subscribe(products => {
