@@ -16,8 +16,7 @@
             <td>{{product.libelle}}</td>
             <td>{{product.prix}}</td>
             <td>
-              <!-- (click)="deleteproduct(product.productid)" -->
-             <button class="btn btn-outline-danger mx-2"><i class="fa fa-trash" aria-hidden="true"></i></button>
+             <button (click)="deleteproduct(product.productid)"  class="btn btn-outline-danger mx-2"><i class="fa fa-trash" aria-hidden="true"></i></button>
              <button [routerLink]="['/update',product.productid,product.prix,product.libelle]" class="btn btn-outline-warning "><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
             </td>
          </tr>
