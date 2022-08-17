@@ -9,9 +9,6 @@ import { ProductService } from '../../services/api/product.service';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
-  id?:number;
-  libelle_product:String="";
-  prix?:number;
   product:Product=new Product();
   private sub: any;
   error:String="";
@@ -19,16 +16,16 @@ export class UpdateProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
-    this.id = +params['id'];
-    this.libelle_product=params['libelle'];
-    this.prix=+params['prix'];
+    this.product.productid = +params['id'];
+    this.product.libelle=params['libelle'];
+    this.product.prix=+params['prix'];
   })
-  this.updatedproduct();
+   // this.updatedproduct();
   }
 
   updatedproduct(){
-    this.productService.updatedproduct(this.product).subscribe(p=>{
-      this.product=p;
+    this.productService.updatedproduct(this.product,this.product.productid).subscribe(p=>{
+      //this.product=p;
       this.router.navigate(['']);
   })
 }
