@@ -1,17 +1,20 @@
+<div class=" mt-5  w-100 justify-content-center align-items-center py-5">
+ <form class=" shadow p-5 mx-5 "  method="POST" (ngSubmit)="addproduct()">
+   <h1 class="text-center">Add </h1>
+   <h2 class="text-danger"> {{error}}</h2>
 
- <form method="POST" (ngSubmit)="addproduct()">
-      {{error}}
   <input type="text"
-   name="produit" [(ngModel)]="product.libelle"
+   name="produit" class="form-control w-50 mb-2 mx-5" [(ngModel)]="product.libelle"
    required
    placeholder="Nom produit">
 
-  <input type="text"
+  <input type="text" class="form-control w-50 mb-2 mx-5"
   name="prix" [(ngModel)]="product.prix"
   required
   placeholder="prix produit">
 
-   <button>Add</button>
+   <button class="btn btn-outline-primary mx-5">Add</button>
 
   </form>
+  </div>
 

@@ -1,13 +1,15 @@
-<form (ngSubmit)="updatedproduct()">
+<div class=" mt-5  w-100 justify-content-center align-items-center py-5">
+<form class="shadow p-5" (ngSubmit)="updatedproduct()">
   <div class="mb-3">
     <label for="libelle" >Libelle produit</label>
-    <input type="text"  id="libelle" name="libelle" [(ngModel)]="product.libelle"/>
+    <input type="text" class="mx-5 form-control w-50"  id="libelle" name="libelle" [(ngModel)]="product.libelle"/>
   </div>
 
   <div class="mb-3">
     <label for="prix" >Prix produit</label>
-    <input type="number"  min="1" max="9999999" id="prix" name="prix" [(ngModel)]="product.prix"/>
+    <input type="number" class="mx-5 form-control w-50"  min="1" max="9999" id="prix" name="prix" [(ngModel)]="product.prix"/>
   </div>
 
-  <button type="submit" class="btn btn-primary" >Update</button>
+  <button type="submit" class="btn btn-warning" >Update</button>
 </form>
+</div>
